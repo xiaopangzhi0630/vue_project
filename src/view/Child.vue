@@ -6,7 +6,7 @@
     <br />
 
 
-    <button @click="handleChange">传值到父组件</button>
+    <!-- <button @click="handleChange">传值到父组件</button> -->
   </div>
 </template>
 

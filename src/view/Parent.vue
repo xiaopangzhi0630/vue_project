@@ -1,10 +1,14 @@
 <template>
   <div>
- 
 
-    <Child1 />
+    111
 
-    <Child2 />
+    <Button @click='fn1'>按钮</Button>
+    <Button @click='fn2'>按钮</Button>
+
+    <!-- <Child1 />
+
+    <Child2 /> -->
 
   </div>
 </template>
@@ -12,7 +16,7 @@
 <script>
   import Child1 from './Child1'
   import Child2 from './Child2'
-  
+
   export default {
 
 
@@ -30,6 +34,19 @@
       childVal: function (val) {
 
         this.msg = val
+      },
+
+      // 动态路由, 渲染同一个组件
+
+      fn1: function () {
+        this.$router.push({
+          path: `/child/${1}`
+        })
+      },
+      fn2: function () {
+        this.$router.push({
+          path: `/child/${2}`
+        })
       }
     }
   }

@@ -38,6 +38,11 @@ export default new Router({
       component: () => import('@/view/Child')
     },
     {
+      path: '/child/:id',
+      name: 'Child',
+      component: () => import('@/view/Child')
+    },
+    {
       path: '/parent',
       name: 'Parent',
       component: () => import('@/view/Parent')
